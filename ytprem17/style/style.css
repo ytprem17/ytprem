@@ -1,0 +1,77 @@
+/* FULL PAGE STYLE */
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    gap: 80px;
+}
+
+/* LEFT IMAGE STYLE */
+.profile-img {
+    width: 420px;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid #f4d000; /* yellow border */
+}
+
+/* RIGHT SECTION */
+.right-section {
+    max-width: 600px;
+}
+
+/* NAME */
+.name {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* TITLE */
+.title {
+    font-size: 22px;
+    margin-top: 5px;
+    color: #f4d000; /* yellow */
+    letter-spacing: 1px;
+}
+
+/* DESCRIPTION TEXT */
+.text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 25px;
+    color: #dcdcdc;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+    margin-top: 40px;
+    padding: 12px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #f4d000;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.email-box {
+    margin-top: 15px;
+    color: rgb(26, 157, 142);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.contact-btn:hover {
+    background: #ffe249;
+}
