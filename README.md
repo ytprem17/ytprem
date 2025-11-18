@@ -16,6 +16,4 @@ I enjoy building clean, simple, and impactful digital projects using design and 
 ## 🛠️ Technologies Used
 - HTML  
 - CSS  
-- JavaScript  
-
-## 📁 Project Structure
+- JavaScript 
