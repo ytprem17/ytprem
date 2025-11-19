@@ -1,4 +1,3 @@
-/* FULL PAGE STYLE */
 body {
     margin: 0;
     background: #000;
@@ -11,52 +10,54 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px;
-    gap: 80px;
+    padding: 50px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-/* LEFT IMAGE STYLE */
+/* LEFT IMAGE */
 .profile-img {
-    width: 420px;
-    height: 520px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
     border-radius: 20px;
-    border: 5px solid #f4d000; /* yellow border */
+    border: 5px solid #f4d000;
 }
 
 /* RIGHT SECTION */
 .right-section {
-    max-width: 600px;
+    max-width: 500px;
+    text-align: left;
 }
 
 /* NAME */
 .name {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: bold;
     margin: 0;
 }
 
 /* TITLE */
 .title {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 5px;
-    color: #f4d000; /* yellow */
+    color: #f4d000;
     letter-spacing: 1px;
 }
 
-/* DESCRIPTION TEXT */
+/* TEXT */
 .text {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.5;
-    margin-top: 25px;
+    margin-top: 20px;
     color: #dcdcdc;
 }
 
-/* CONTACT BUTTON */
+/* BUTTON */
 .contact-btn {
-    margin-top: 40px;
-    padding: 12px 28px;
-    font-size: 18px;
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 17px;
     border: none;
     border-radius: 8px;
     background: #f4d000;
@@ -64,6 +65,11 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+.contact-btn:hover {
+    background: #ffe249;
+}
+
 .email-box {
     margin-top: 15px;
     color: rgb(26, 157, 142);
@@ -71,7 +77,29 @@ body {
     font-weight: bold;
 }
 
+/* ----------- MOBILE RESPONSIVE ----------- */
+@media (max-width: 768px) {
 
-.contact-btn:hover {
-    background: #ffe249;
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .right-section {
+        text-align: center;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
 }
+
