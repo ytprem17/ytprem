@@ -1,3 +1,8 @@
+/* GLOBAL RESET - Ye zaruri hai taaki padding se layout na bigde */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background: #000;
@@ -8,55 +13,63 @@ body {
 /* MAIN CONTAINER */
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Horizontal Center */
+    align-items: center;     /* Vertical Center */
     padding: 50px;
-    gap: 50px;
+    gap: 60px;               /* Thoda gap badhaya hai desktop ke liye */
     flex-wrap: wrap;
+    min-height: 100vh;       /* Ye sabse zaruri hai: Full Screen Height */
+    width: 100%;
 }
 
 /* LEFT IMAGE */
 .profile-img {
     width: 100%;
-    max-width: 380px;
+    max-width: 380px;        /* Desktop ke liye max size */
     height: auto;
     border-radius: 20px;
     border: 5px solid #f4d000;
+    object-fit: cover;       /* Image ko squish hone se bachata hai */
+    box-shadow: 0 0 20px rgba(244, 208, 0, 0.3); /* Thoda glow effect */
 }
 
 /* RIGHT SECTION */
 .right-section {
     max-width: 500px;
     text-align: left;
+    flex: 1;                 /* Taaki text section shrink na ho */
+    min-width: 300px;        /* Content ko bahut chhota hone se rokega */
 }
 
 /* NAME */
 .name {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     margin: 0;
+    line-height: 1.2;
 }
 
 /* TITLE */
 .title {
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 22px;
+    margin-top: 10px;
     color: #f4d000;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 /* TEXT */
 .text {
     font-size: 17px;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-top: 20px;
     color: #dcdcdc;
 }
 
 /* BUTTON */
 .contact-btn {
-    margin-top: 25px;
-    padding: 12px 25px;
+    margin-top: 30px;
+    padding: 14px 30px;
     font-size: 17px;
     border: none;
     border-radius: 8px;
@@ -64,14 +77,16 @@ body {
     color: black;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s ease; /* Hover effect smooth hoga */
 }
 
 .contact-btn:hover {
     background: #ffe249;
+    transform: scale(1.05); /* Hover karne par thoda bada hoga */
 }
 
 .email-box {
-    margin-top: 15px;
+    margin-top: 20px;
     color: rgb(26, 157, 142);
     font-size: 16px;
     font-weight: bold;
@@ -81,13 +96,22 @@ body {
 @media (max-width: 768px) {
 
     .container {
-        flex-direction: column;
-        padding: 20px;
-        gap: 25px;
+        flex-direction: column-reverse; /* Mobile par Image upar aur Text neeche achha lagta hai, agar Text upar chahiye to ise hata dein */
+        padding: 30px 20px; /* Side padding kam ki taaki mobile me jagah mile */
+        gap: 30px;
+        text-align: center; /* Sab kuch center me */
+        justify-content: center;
     }
 
     .right-section {
         text-align: center;
+        min-width: auto; /* Mobile par width restriction hatana */
+        width: 100%;
+    }
+
+    .profile-img {
+        max-width: 280px; /* Mobile par image thodi choti achhi lagti hai */
+        border-width: 4px;
     }
 
     .name {
@@ -100,6 +124,11 @@ body {
 
     .text {
         font-size: 16px;
+        text-align: center; /* Text ko justify ya center kar sakte hain */
+    }
+    
+    .contact-btn {
+        width: 100%; /* Button mobile par full width achha lagta hai */
+        max-width: 300px;
     }
 }
-
